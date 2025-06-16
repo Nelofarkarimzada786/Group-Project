@@ -9,7 +9,7 @@ public class StringFilter {
         List<String> result = new ArrayList<>();
         for(String str : strings)
         {
-            if(str.startsWith("A") || str.startsWith("a"))
+            if(str.startsWith("A"))
             {
                 result.add(str.toLowerCase());
             }

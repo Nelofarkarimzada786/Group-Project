@@ -39,3 +39,66 @@ Part 3: Implementing Features Using OOP Concepts
 -
 **Constructors:** Use in specific animal classes to initialize properties like name, age, or any unique attributes they have.
 -
+
+
+**Solutions**
+
+1. create AnimalBehavior interface which defines common behaviors that all animals should have 
+--methods we must declare inside this interface are:  
+
+      eat(): how the animal eats 
+      sleep(): how tha animal sleeps 
+      makeSound(): The sound the animal makes
+
+2. Create Animal abstract class which will be base class for all animals providing common functionality
+--parts we must declare inside this class are: 
+    --fields: **name** and **age**(protected so subclass can access)  
+    --Constructor: initializes **name** and **age** 
+    --Concrete sleep() method (default implementation)
+    --Abstract methods that subclasses must implement
+
+3. Create Mammal class which will be base class for all mammals 
+--parts we must declare inside this class are: 
+    --field: furColor 
+    --Implements displayInformation() for mammals
+    --Constructor chains to animal's constructor
+
+4. create Bird abstract class which will be the base class for all birds 
+   --parts we must declare inside this class are:
+   --field: wingspan
+   --Implements displayInformation() for birds
+   --Fly() method (unique to birds)
+
+5. Create Lion class which will be concrete lion implementation and this class will extend from Mammal class 
+   --parts we must declare inside this class are:
+   --eat() with lion-specific behavior
+   --makeSound() with lion roar 
+   --displayInformation() adds species info
+
+6. Create Elephant class which will be concrete elephant implementation  and extends from Mammal class
+   --parts we must declare inside this class are:
+   --field: trunkLength
+   --Implements elephant-specific behaviors 
+   --Displays additional trunk length information 
+
+7. Create Parrot Class  which will be concrete parrot implementation and extends form Bird class
+   --parts we must declare inside this class are:
+   --field:featherColor  
+   --Implements parrot-Specific behaviors 
+   --Display additional feather color information
+
+8. Create eagle class which will be concrete eagle implementation 
+   --parts we must declare inside this class are:
+   --field: flyingSpeed
+   --Implements eagle-specific behaviors 
+   --Displays additional flying speed information 
+
+9. Create ZooSimulation Class (Main) which will do the following: 
+    --create instances of different animals
+    --Stores them in an Animal array
+    --Iterated through each animal:         
+        *Display header with name
+        *shows animal information
+        *Makes animal eat, make sound and sleep
+        *Display header with name 
+        *If animal is a Bird make it fly(demonstrates polymorphism)
