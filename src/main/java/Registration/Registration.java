@@ -43,11 +43,12 @@ public class Registration {
         {
             if(userName != null && password.contains(userName))
             {
-                this.password = password;
+
                 System.out.println("Invalid password. Password cannot contain username.");
             }
             else
             {
+                this.password = password;
                 System.out.println("Password set successfully.");
             }
         }
