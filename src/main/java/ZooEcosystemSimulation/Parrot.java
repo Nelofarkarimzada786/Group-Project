@@ -2,7 +2,7 @@ package ZooEcosystemSimulation;
 
 public class Parrot extends Bird{
 
-    private String featherColor;
+    private final String featherColor;
     public Parrot(String name, int age, double wingspan, String featherColor)
     {
         super(name, age, wingspan);
@@ -25,7 +25,7 @@ public class Parrot extends Bird{
     @Override
     public void displayInformation()
     {
-        super.displayInforamtion();
+        super.displayInformation();
         System.out.println("Species: Parrot");
         System.out.println("Feather Color: " + featherColor);
     }

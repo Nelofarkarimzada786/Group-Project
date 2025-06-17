@@ -2,7 +2,7 @@ package ZooEcosystemSimulation;
 
 public class Eagle extends Bird {
 
-    private double flyingSpeed;
+    private final double flyingSpeed;
 
     public Eagle(String name, int age, double wingspan, double flyingSpeed)
     {
@@ -26,7 +26,7 @@ public class Eagle extends Bird {
     @Override
     public void displayInformation()
     {
-        super.displayInforamtion();
+        super.displayInformation();
         System.out.println("Species: Eagle");
         System.out.println("Flying Speed " + flyingSpeed + " km/h");
     }

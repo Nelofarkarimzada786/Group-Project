@@ -11,7 +11,7 @@ public abstract class Bird extends Animal {
 
 
     //@Override
-    public void displayInforamtion()
+    public void displayInformation()
     {
         System.out.println("Type: Bird");
         System.out.println("Name: " + name);
